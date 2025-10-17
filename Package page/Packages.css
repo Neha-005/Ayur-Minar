@@ -1,20 +1,20 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #2d2d2d;
+      background: #FFFFF0;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #2d2d2d;
-    overflow-x: hidden;
-    background: #FFFFF0;
-    line-height: 1.6;
-}
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
 
 /* Navbar */
 .navbar {
@@ -249,222 +249,205 @@ body {
   }
 }
 
-/* Hero Section */
-.about-hero {
-  background: url('Images/treatment.png') center/cover no-repeat;
-  position: relative;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
+    /* Hero Section */
+    .about-hero {
+      background: url('../Images/packages.jpg') center/cover no-repeat;
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
 
-.about-hero .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(27, 62, 42, 0.6);
-  z-index: 1;
-}
+    .about-hero .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(27, 62, 42, 0.5);
+      z-index: 1;
+    }
 
-.about-hero .hero-text {
-  position: relative;
-  z-index: 2;
-  padding: 0 20px;
-  margin-top: 50px;
-}
+    .about-hero .hero-text {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+      max-width: 800px;
+    }
 
-.about-hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 40px;
-  margin-bottom: 15px;
-}
+    .about-hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
 
-.about-hero p {
-  font-size: 18px;
-  max-width: 600px;
-  margin: 0 auto;
-}
+    .about-hero p {
+      font-size: 20px;
+      color: #e5c985;
+    }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .about-hero {
-    height: auto;
-    padding: 60px 0; 
-  }
-
+/* Tablet Adjustments */
+@media (max-width: 992px) {
   .about-hero h1 {
-    font-size: 28px; 
-    line-height: 1.3;
-    margin-bottom: 12px;
+    font-size: 38px;
   }
-
   .about-hero p {
-    font-size: 16px;
-    line-height: 1.5;
-    padding: 0 10px;
+    font-size: 18px;
   }
-}
-
-@media (max-width: 480px) {
-  .about-hero {
-    padding: 50px 0; 
-  }
-
-  .about-hero h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .about-hero p {
-    font-size: 15px;
-    line-height: 1.5;
-  }
-}
-
-.treatment-section {
-  background: #fffaf0;
-  padding: 80px 20px;
-  font-family: 'Georgia', serif;
-}
-
-.treatment-section h2 {
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-  color: #1b3e2a;
-  font-size: 40px;
-  margin-bottom: 15px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-}
-
-.treatment-section p {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 60px;
-  font-size: 19px;
-  color: #6b6b6b;
-  font-weight: 500;
-  line-height: 1.6;
-}
-
-.treatment-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.treatment-card {
-  background: #fff;
-  border-radius: 25px;
-  box-shadow: 0 15px 30px rgba(27, 62, 42, 0.15);
-  padding: 30px 25px 15px;
-  border: 2px solid #bfa760;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.treatment-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 30px 50px rgba(27, 62, 42, 0.3);
-  border-color: #17402e;
-}
-
-.treatment-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 5px 15px rgba(191, 167, 96, 0.35);
-  transition: transform 0.4s ease;
-}
-
-.treatment-card:hover img {
-  transform: scale(1.05);
-}
-
-.treatment-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  color: #1b3e2a;
-  margin-bottom: 6px;
-  letter-spacing: 0.8px;
-}
-
-.treatment-card h4 {
-  font-size: 17px;
-  color: #bfa760;
-  margin-bottom: 15px;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.treatment-card ul {
-  list-style-type: square;
-  padding-left: 20px;
-  color: #555555;
-  font-size: 15.5px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.treatment-card ul li {
-  margin-bottom: 8px;
-}
-
-.treatment-card .extra-info {
-  color: #6b6b6b;
-  font-size: 14.5px;
-  font-style: italic;
-  margin-top: 10px;
-  line-height: 1.5;
 }
 
 /* Mobile Adjustments */
 @media (max-width: 600px) {
-  .treatment-section {
-    padding: 50px 15px;
+  .about-hero {
+    height: 80vh; 
+    padding: 20px 0;
   }
 
-  .treatment-section h2 {
+  .about-hero .hero-text {
+    padding: 0 15px;
+    max-width: 90%;
+  }
+
+  .about-hero h1 {
     font-size: 26px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
-  .treatment-section p {
+  .about-hero p {
     font-size: 15px;
-    margin-bottom: 35px;
-    line-height: 1.5;
-    padding: 0 10px;
+    line-height: 1.4;
   }
+}
 
-  .treatment-card h3 {
-    font-size: 18px;
+/* Section Title */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #1b3e2a;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* Packages Grid */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Package Card */
+.package {
+  background: #fff;
+  border-radius: 15px;
+  border: 3px solid #1b3e2a; 
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  padding: 25px;
+  overflow: hidden;
+}
+
+.package:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  border-color: #bfa760; 
+}
+
+/* Package Header */
+.package-header {
+  background-color: #1b3e2a;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.package-header h3 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+}
+
+/* Color Themes */
+.package.gold .package-header { background: #b3912e; color: #ffffff; }
+.package.diamond .package-header { background: #6e6db1; color: #fff; }
+.package.silver .package-header { background: #808180; color: #fff; }
+.package.platinum .package-header { background: #642b1d; color: #fff; }
+
+/* Package Table */
+.package table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.package table th,
+.package table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #301d04;
+  font-size: 15px;
+}
+
+.package table th {
+  background: #f4f4f4;
+  font-weight: 600;
+}
+
+/* Hover effect on table rows */
+.package table tbody tr:hover {
+  background-color: rgba(191, 167, 96, 0.1); 
+}
+
+/* Total Sessions */
+.total-sessions {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: right;
+  color: #1b3e2a;
+}
+
+/* Section Spacing */
+.packages-section {
+  padding: 80px 0;
+  background: #fdfcf6;
+}
+
+/* Tablet Adjustments */
+@media (max-width: 992px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 30px;
   }
+}
 
-  .treatment-card h4 {
-    font-size: 15px;
-    margin-bottom: 10px;
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .packages-grid {
+    padding: 0 20px;
+    gap: 30px;
   }
-
-  .treatment-card ul {
+  .package-header h3 {
+    font-size: 1.4rem;
+  }
+  .package table th,
+  .package table td {
     font-size: 14px;
-    padding-left: 18px;
+    padding: 10px 8px;
   }
-
-  .treatment-card .extra-info {
-    font-size: 13px;
+  .total-sessions {
+    font-size: 1rem;
   }
 }
 
