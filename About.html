@@ -6,7 +6,7 @@
   <title>About Us | Ayur Minar</title>
   <link rel="icon" type="image/png" href="../Images/favicon.png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="./About page/about.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
@@ -18,7 +18,9 @@
 <!-- Navbar -->
 <nav class="navbar">
   <div class="logo">
-    <img src="../Images/logo1.png" alt="Ayur Minar logo" />
+    <a href="index.html"> 
+      <img src="./Images/logo1.png" alt="Ayur Minar logo" />
+    </a>
   </div>
 
   <!-- Hamburger Icon -->
@@ -30,26 +32,26 @@
 
   <!-- Navigation Links -->
   <ul class="nav-links" id="navLinks">
-    <li><a href="../index.html">HOME</a></li>
+    <li><a href="index.html">HOME</a></li>
     <li><a href="About.html">ABOUT US</a></li>
-    <li><a href="../Gallery page/gallery.html">GALLERY</a></li>
+    <li><a href="gallery.html">GALLERY</a></li>
 
     <!-- Dropdown for desktop -->
     <li class="dropdown desktop-only">
       <a href="#">WHAT WE OFFER <i class="fas fa-chevron-down"></i></a>
       <ul class="dropdown-menu">
-        <li><a href="../Treatment page/treatments.html">Our Treatments</a></li>
-        <li><a href="../Special page/special.html">Special Treatments</a></li>
-        <li><a href="../Package page/Packages.html">Special Packages</a></li>
+        <li><a href="treatments.html">Our Treatments</a></li>
+        <li><a href="special.html">Special Treatments</a></li>
+        <li><a href="Packages.html">Special Packages</a></li>
       </ul>
     </li>
 
     <!-- Direct links for mobile -->
-    <li class="mobile-only"><a href="../Treatment page/treatments.html">OUR TREATMENTS</a></li>
-    <li class="mobile-only"><a href="../Special page/special.htmll">OUR SPECIAL TREATMENTS</a></li>
-    <li class="mobile-only"><a href="../Package page/Packages.html">OUR SPECIAL PACKAGES</a></li>
+    <li class="mobile-only"><a href="treatments.html">OUR TREATMENTS</a></li>
+    <li class="mobile-only"><a href="special.htmll">OUR SPECIAL TREATMENTS</a></li>
+    <li class="mobile-only"><a href="Packages.html">OUR SPECIAL PACKAGES</a></li>
 
-    <li><a href="../Contact page/contact.html">CONTACT US</a></li>
+    <li><a href="contact.html">CONTACT US</a></li>
   </ul>
 
   <!-- Google Translate Widget -->
@@ -312,9 +314,11 @@
 <!-- Footer -->
 <footer class="footer">
   <div class="footer-container">
-    <div class="footer-left">
-      <img src="../Images/logo1.png" alt="Ayur Minar Logo with Tagline" class="footer-logo" />
-    </div>
+<div class="footer-left">
+  <a href="index.html"> 
+    <img src="./Images/logo1.png" alt="Ayur Minar Logo with Tagline" class="footer-logo" />
+  </a>
+</div>
     <div class="footer-center">
       <p>
           © 2025 Ayur Minar Kottakkal Ayurvedic Medical Center. All Rights Reserved.
@@ -329,12 +333,18 @@
   </div>
 </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1200 });
+    AOS.init({
+      duration: 1200,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
   </script>
 
-  <script src="../home.js"></script>
+    <script src="home.js"></script>
 
   <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
