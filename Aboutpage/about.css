@@ -1,53 +1,53 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    color: #2d2d2d;
-    overflow-x: hidden;
-    background: #FFFFF0;
-    line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  color: #2d2d2d;
+  overflow-x: hidden;
+  background: #fffff0;
+  line-height: 1.6;
 }
 
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px 50px;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .navbar .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navbar .logo img {
-    height: 65px;
-    width: auto;  
-    max-width: 220px; 
+  height: 65px;
+  width: auto;
+  max-width: 220px;
 }
 
 .navbar .logo span {
-    display: none;
+  display: none;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 35px;
+  list-style: none;
+  display: flex;
+  gap: 35px;
 }
 
 .nav-links li a {
@@ -64,23 +64,23 @@ body {
 }
 
 .nav-links li a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #bfa760;
-    transition: width 0.4s ease;
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #bfa760;
+  transition: width 0.4s ease;
 }
 
 .nav-links li a:hover {
-    color: #034c1b;
+  color: #034c1b;
 }
 
 .nav-links li a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 /* Dropdown */
@@ -101,7 +101,7 @@ body {
   background: #fff8e7;
   padding: 15px 0;
   width: 220px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   display: none;
   flex-direction: column;
@@ -125,7 +125,7 @@ body {
   font-size: 15px;
   font-weight: 500;
   transition: background 0.3s ease, color 0.3s ease;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .dropdown-menu li a:hover {
@@ -149,6 +149,7 @@ body {
     opacity: 0;
     transform: translateY(-8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -163,6 +164,7 @@ body {
   cursor: pointer;
   z-index: 1001;
 }
+
 .hamburger span {
   width: 25px;
   height: 3px;
@@ -170,12 +172,15 @@ body {
   border-radius: 2px;
   transition: all 0.4s ease;
 }
+
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
@@ -187,7 +192,9 @@ body {
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  html, body {
+
+  html,
+  body {
     overflow-x: hidden;
   }
 
@@ -195,6 +202,7 @@ body {
   .desktop-only {
     display: none;
   }
+
   /* Show mobile links */
   .mobile-only {
     display: block;
@@ -207,15 +215,16 @@ body {
     right: -100%;
     height: 100vh;
     width: 260px;
-    background-color: #FFFFF0;
+    background-color: #fffff0;
     flex-direction: column;
     align-items: flex-start;
     padding-top: 100px;
     padding-left: 30px;
     gap: 25px;
     transition: right 0.4s ease;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   }
+
   .nav-links.active {
     right: 0;
   }
@@ -224,9 +233,10 @@ body {
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
-    font-family: 'poppins', serif;
+    font-family: "poppins", serif;
     transition: color 0.3s ease, transform 0.3s ease;
   }
+
   .nav-links li a:hover {
     color: #bfa760;
     transform: translateX(5px);
@@ -251,7 +261,7 @@ body {
 
 /* Hero Section */
 .about-hero {
-  background: url('../Images/about-hero.png') center/cover no-repeat;
+  background: url("../Images/about-hero.png") center/cover no-repeat;
   position: relative;
   height: 60vh;
   display: flex;
@@ -279,9 +289,18 @@ body {
 }
 
 .about-hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 40px;
   margin-bottom: 15px;
+  line-height: normal;
+}
+
+@media(max-width:991px) {
+
+  .about-hero h1 br {
+    display: none;
+  }
+
 }
 
 .about-hero p {
@@ -307,7 +326,7 @@ body {
 
 .about-image img {
   max-width: 100%;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .about-content {
@@ -316,7 +335,7 @@ body {
 }
 
 .about-content h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 32px;
   color: #bfa760;
   margin-bottom: 20px;
@@ -330,7 +349,7 @@ body {
   font-size: 16px;
   margin-bottom: 16px;
   color: #333;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Responsive */
@@ -350,17 +369,17 @@ body {
 
 /*What guide us section*/
 .guides-us-section {
-  background: #FFFFF0;
+  background: #fffff0;
   padding: 70px 20px 100px;
   color: #1b3e2a;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
 
 .container {
   max-width: 1200px;
   margin: auto;
-  padding-left: 15px;  
+  padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
   width: 100%;
@@ -368,7 +387,7 @@ body {
 
 /* Section title  */
 .section-title {
-  font-family: 'Playfair Display', serif;  
+  font-family: "Playfair Display", serif;
   font-size: 36px;
   font-weight: 700;
   text-align: center;
@@ -391,9 +410,9 @@ body {
 .section-subtitle {
   font-size: 18px;
   text-align: center;
-  color:  #4e3b01;
+  color: #4e3b01;
   margin-bottom: 50px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Cards container */
@@ -418,8 +437,8 @@ body {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: default;
   position: relative;
-  overflow: visible;   
-  font-family: 'Poppins', sans-serif;
+  overflow: visible;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
 
@@ -430,7 +449,7 @@ body {
 
 /* Card icon container */
 .card-icon {
-  background-color: #bfa76033; 
+  background-color: #bfa76033;
   width: 90px;
   height: 90px;
   border-radius: 50%;
@@ -456,7 +475,7 @@ body {
 
 /* Card heading */
 .guide-card h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   color: #1b3e2a;
   font-size: 26px;
   margin-bottom: 15px;
@@ -544,7 +563,7 @@ body {
   }
 
   .guide-card {
-    padding: 25px 20px 30px;  
+    padding: 25px 20px 30px;
     max-width: 100%;
   }
 
@@ -589,7 +608,7 @@ body {
 }
 
 .section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 36px;
   margin-bottom: 10px;
   color: #1b3e2a;
@@ -610,18 +629,18 @@ body {
 }
 
 .principle-card {
-  background-color: #FFFFF0;
+  background-color: #fffff0;
   border: 1px solid #e4e0d8;
   border-left: 5px solid #bfa760;
   border-radius: 12px;
   padding: 30px 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
 }
 
 .principle-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
 .principle-card img {
@@ -634,7 +653,7 @@ body {
   font-size: 22px;
   margin-bottom: 10px;
   color: #1b3e2a;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .principle-card p {
@@ -660,13 +679,13 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   color: #1b3e2a;
 }
 
 /* Section Styling */
 .doctor-section {
-  background: #fffff0; 
+  background: #fffff0;
   padding: 80px 20px;
   text-align: center;
   border-radius: 20px;
@@ -679,13 +698,12 @@ body {
   margin-bottom: 10px;
   letter-spacing: 2px;
   color: #1b3e2a;
-  text-transform: uppercase;
 }
 
 .section-subtitle {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  color: #bfa760; 
+  color: #bfa760;
   margin-bottom: 50px;
   font-weight: 300;
   letter-spacing: 1.5px;
@@ -749,7 +767,7 @@ body {
 }
 
 .specialty {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.25rem;
   color: #bfa760;
@@ -759,7 +777,7 @@ body {
 }
 
 .description {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
   line-height: 1.7;
   color: #444;
@@ -768,7 +786,9 @@ body {
 
 /* Responsive */
 @media (max-width: 900px) {
-  .doctor-profile, .doctor-profile.reverse {
+
+  .doctor-profile,
+  .doctor-profile.reverse {
     flex-direction: column;
     max-width: 100%;
     gap: 35px;
@@ -818,27 +838,32 @@ body {
 /*Insurance section*/
 .insurance-partners {
   text-align: center;
-  padding: 40px 20px; 
-  background: #fdfcf6; 
+  padding: 40px 20px;
+  background: #fdfcf6;
   position: relative;
-  margin-top: -60px; 
+  margin-top: -60px;
 }
 
 .insurance-partners h2 {
   font-size: 2.5rem;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: bold;
   color: #1b3e2a;
   margin-bottom: 20px;
   letter-spacing: 2px;
 }
 
-.insurance-partners .green { color: #1b3e2a; }
-.insurance-partners .orange { color: #bfa760; }
+.insurance-partners .green {
+  color: #1b3e2a;
+}
+
+.insurance-partners .orange {
+  color: #bfa760;
+}
 
 .insurance-partners .subtitle {
   font-size: 1.2rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #4e3b01;
   margin-bottom: 60px;
   letter-spacing: 1px;
@@ -850,7 +875,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 !important;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .insurance-partners .swiper-slide img {
@@ -860,8 +885,8 @@ body {
   background: white;
   border: 2px solid #bfa760;
   border-radius: 12px;
-  padding: 0; 
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  padding: 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
   transition: none;
   box-sizing: border-box;
 }
@@ -872,8 +897,8 @@ body {
   color: #1b3e2a !important;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 50%;
-  width: 28px; 
-  height: 28px; 
+  width: 28px;
+  height: 28px;
 }
 
 .swiper-button-prev::after,
@@ -909,7 +934,7 @@ body {
   background-color: #1b3e2a;
   color: #fff;
   padding: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .contact-container {
@@ -949,7 +974,7 @@ body {
 .contact-info {
   display: flex;
   flex-direction: column;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   gap: 30px;
 }
 
@@ -973,10 +998,10 @@ body {
   margin-top: 20px;
   background-color: #bfa760;
   color: #1b3e2a;
-  padding: 8px 20px; 
+  padding: 8px 20px;
   border-radius: 30px;
   font-weight: 600;
-  font-size: 14px; 
+  font-size: 14px;
   letter-spacing: 0.4px;
   text-decoration: none;
   transition: all 0.4s ease;
@@ -996,7 +1021,7 @@ body {
   background-color: #1b3e2a;
   color: #fff;
   padding: 20px 40px;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   border-top: 1px solid #ffffff;
 }
 
@@ -1058,8 +1083,8 @@ body {
   }
 
   .info-block {
-    justify-content: flex-start;  
-    text-align: left;  
+    justify-content: flex-start;
+    text-align: left;
   }
 
   .info-block p {
@@ -1077,7 +1102,7 @@ body {
     margin-top: 25px;
   }
 
-.footer-container {
+  .footer-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -1115,8 +1140,8 @@ body {
 
   .info-block {
     gap: 12px;
-    justify-content: flex-start;  
-    text-align: left;  
+    justify-content: flex-start;
+    text-align: left;
   }
 
   .btn-appointment {
@@ -1124,11 +1149,11 @@ body {
     padding: 10px 20px;
   }
 
-    .footer-logo {
+  .footer-logo {
     max-height: 45px;
   }
 }
 
-body > :not(.footer) {
+body> :not(.footer) {
   flex: 1;
 }
