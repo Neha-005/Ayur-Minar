@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /README
+Disallow: /LICENSE
+Disallow: /drafts/
+
+Sitemap: https://ayurminar.com/sitemap.xml
