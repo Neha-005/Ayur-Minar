@@ -6,4 +6,4 @@ It is shared with the SEO team for optimization purposes only.
 Unauthorized reuse, redistribution, or deployment is not permitted.
 
 ## Ownership
-Copyright © 2025 Neha Shaji. All rights reserved.
+Copyright © 2026 Neha Shaji. All rights reserved.
